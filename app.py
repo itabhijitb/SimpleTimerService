@@ -1,13 +1,12 @@
 
 import time
 
-from flask import Flask, request, render_template, redirect, \
-    url_for, jsonify
+from flask import Flask, request, render_template, redirect
+from flask import url_for, jsonify
 from celery import Celery
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'top-secret!'
 
 
 # Celery configuration
